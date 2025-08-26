@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Color Scheme Generator</title>
+</head>
+<body>
+    <h1>Color Scheme Generator</h1>
+    <p class="description">Create beautiful color palettes for your design projects</p>
+    
+    <div class="container">
+        <div class="controls">
+            <div class="color-picker">
+                <input type="color" id="color-picker" class="color-input" value="#3498db">
+                <span class="color-value" id="color-value">#3498db</span>
+            </div>
+            
+            <div class="mode-selector">
+                <label for="mode">Scheme Mode:</label>
+                <select id="mode">
+                    <option value="monochrome">Monochrome</option>
+                    <option value="monochrome-dark">Monochrome Dark</option>
+                    <option value="monochrome-light">Monochrome Light</option>
+                    <option value="analogic">Analogic</option>
+                    <option value="complement">Complement</option>
+                    <option value="analogic-complement">Analogic Complement</option>
+                    <option value="triad">Triad</option>
+                    <option value="quad">Quad</option>
+                </select>
+            </div>
+            
+            <button id="get-scheme">Generate Scheme</button>
+        </div>
+        
+        <div id="color-scheme" class="color-scheme">
+            <div class="loading">Select a color and click "Generate Scheme" to create your palette</div>
+        </div>
+        
+        <div class="instructions">
+            <h3>How to Use</h3>
+            <p>1. Select a base color using the color picker</p>
+            <p>2. Choose a color scheme mode from the dropdown</p>
+            <p>3. Click "Generate Scheme" to create your palette</p>
+            <p>4. Click on any color to copy its HEX value to clipboard</p>
+        </div>
+    </div>
+    
+    <div class="notification" id="notification">Color copied to clipboard!</div>
+</body>
+</html>
+
